@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3sfqwsvo7etk"]
+
+[ext_resource type="PackedScene" uid="uid://cdcg3esb5q1cs" path="res://item.tscn" id="1_70hx6"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cmue0"]
+b = Vector2(1, 570)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2ygf5"]
+a = Vector2(608, 1)
+b = Vector2(-1, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rtqqk"]
+a = Vector2(609, 0)
+b = Vector2(608, -570)
+
+[node name="inventory" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(506, 34)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 610.0
+offset_bottom = 568.0
+color = Color(0.901961, 0.709804, 0.572549, 0.984314)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_cmue0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 567)
+shape = SubResource("SegmentShape2D_2ygf5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 567)
+shape = SubResource("SegmentShape2D_rtqqk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="item" parent="." instance=ExtResource("1_70hx6")]
+position = Vector2(735, -222)
