@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq5j4gjiqd00g"]
+
+[ext_resource type="Script" path="res://ClockTimer.gd" id="1_ux8js"]
+[ext_resource type="Texture2D" uid="uid://cl7ns6yhs8ux1" path="res://icon.svg" id="2_rdrx2"]
+
+[node name="ClockTimer" type="Node2D"]
+script = ExtResource("1_ux8js")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+fill_mode = 4
+texture_progress = ExtResource("2_rdrx2")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
