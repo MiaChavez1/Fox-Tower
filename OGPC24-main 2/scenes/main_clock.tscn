@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmrk5x8al2dfj"]
+
+[ext_resource type="PackedScene" uid="uid://dtaw7itrwnc6x" path="res://characters/ben.tscn" id="1_wf3dw"]
+
+[node name="mainClock" type="Node2D"]
+
+[node name="Ben" parent="." instance=ExtResource("1_wf3dw")]
