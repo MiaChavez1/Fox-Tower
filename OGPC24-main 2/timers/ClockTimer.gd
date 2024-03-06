@@ -17,3 +17,6 @@ func _on_timer_timeout():
 	$TextureProgressBar.value += 1
 	arrow.set_rotation(arrowRotation)
 
+
+func _on_timer_2_timeout():
+	DayTimer.day +=1
