@@ -32,3 +32,8 @@ func inventoryOpen():
 	else:
 		inventory.show()
 	open = !open
+
+
+
+func _on_door_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/main_clock.tscn")

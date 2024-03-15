@@ -10,7 +10,5 @@ func _ready():
 func _process(delta):
 	pass
 
-
-
 func _on_mouse_entered():
 	$TextureProgressBar.value=100

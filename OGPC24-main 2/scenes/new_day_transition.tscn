@@ -95,11 +95,8 @@ _data = {
 script = ExtResource("1_pa0tw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 3036.0
+offset_bottom = 1991.0
 color = Color(0, 0, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

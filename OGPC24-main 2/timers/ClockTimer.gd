@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var arrow = $arrow
-var arrowRotation= 300
+@onready var arrow = $AspectRatioContainer/arrow
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,9 +13,8 @@ func _process(delta):
 	DayTimer.time = $Timer2.get_time_left()
 
 func _on_timer_timeout():
-	arrowRotation += .05
-	$TextureProgressBar.value += 1
-	arrow.set_rotation(arrowRotation)
+	DayTimer.arrowRotation += .05
+	arrow.set_rotation(DayTimer.arrowRotation)
 
 
 func _on_timer_2_timeout():
